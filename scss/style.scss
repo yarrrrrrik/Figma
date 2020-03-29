@@ -1,121 +1,307 @@
-$blue:#2378FC;
-$yellow:#FFC41E;
+$blue: #2378FC;
+$yellow: #FFC41E;
+@mixin allSth(){
+  text-decoration: underline;
+  text-align: center;
+  padding-top: 3%;
+}
 
-body{
-  width:100vw;
+body {
+  width: 100vw;
   background: grey;
-  color:white;
+  color: white;
   text-decoration: none;
 }
-*{
-  color:inherit;
+
+* {
+  color: inherit;
   text-decoration: inherit;
 }
-h1{
+
+h1 {
   text-transform: uppercase;
 }
-.wrapper{
-  width:58%;
+
+a {
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.wrapper {
+  width: 80vw;
   height: 100%;
   margin: 0 auto;
 }
-.section_1{
-  background: url('../pics/bgc.png');
+
+.section_1 {
+  background: url("../pics/bgc.png");
   background-size: cover;
   // background-image: url no-repeat;
-  padding-top:1px;
-  min-height:760px;
+  padding-top: 1px;
+  min-height: 760px;
 }
 // Header styles starts
-.header{
+
+.header {
   width: 100%;
   height: 90px;
   border-bottom: 1px solid #FFFFFF;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  top:0px;
-  left:0px;
+  top: 0;
+  left: 0;
   margin-bottom: 184px;
 }
-.logo{
+
+.logo {
   margin-right: 10%;
   margin-left: 10%;
 }
-.nav_ul{
-  display:flex;
+
+.nav_ul {
+  display: flex;
   justify-content: space-between;
   margin-right: 15%;
-  li{
-    width:120px;
+
+  li {
+    width: 120px;
     text-align: center;
-    a{
-      width:100%;
+
+    a {
+      width: 100%;
       word-wrap: normal;
-      &:hover{
-        opacity: .75;
+
+      &:hover {
+        opacity: 0.75;
       }
     }
   }
 }
-.search_lang{
-  width:30%;
-  a{
+
+.search_lang {
+  width: 30%;
+
+  a {
     text-decoration: none;
-    margin-right:15%;
-    &:last-child{
+    margin-right: 15%;
+
+    &:last-child {
       margin-right: 0;
     }
-    img{
+
+    img {
       position: relative;
-      top:-5px;
-      &:last-child{
-        margin-right:11px;
+      top: -5px;
+
+      &:last-child {
+        margin-right: 11px;
       }
     }
   }
 }
 // header styles ends
 // intro styles starts
-.intro{
-height: 224px;
 
+.intro {
+  height: 224px;
 }
-.wrapper_intro{
+
+.wrapper_intro {
   display: flex;
 }
-.about{
-  width:48%;
-  h1{
+
+.about {
+  width: 48%;
+
+  h1 {
     margin-bottom: 25px;
     font-size: 280%;
-
   }
-  p{
+
+  p {
     font-size: 1.5rem;
     margin-bottom: 25px;
     line-height: 140%;
   }
 }
-.colored_blocks{
-  width:52%;
-  height: 100%;
-  margin-top: 130px;
+
+.colored_blocks {
+  width: 52%;
+  height: 110%;
+  margin-top: 120px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  grid-template-rows:1fr 1.4fr;
-  grid-gap:6%;
+  grid-template-rows: 1fr 1.5fr;
+  grid-gap: 6%;
   grid-row-gap: 9%;
+  font-size: 0.9rem;
 }
-.block_1{
+
+.block {
+  padding-left: 10%;
+  padding-right: 3%;
+  padding-bottom: 10%;
+
+  h3 {
+    font-weight: 500;
+  }
+}
+
+.block_1 {
   background: $blue;
 }
-.block_2{
+
+.block_2 {
   background: #30BCC9;
 }
-.block_3{
+
+.block_3 {
   background: $yellow;
 }
-.block_4{
+
+.block_4 {
   background: #F6404F;
+}
+//intro styles ends
+//section_1 styles ends
+//section_2 styles starts
+
+.section_2 {
+  width: 100%;
+  height: 426px;
+  background: $blue;
+  padding-top: 75px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper_ul {
+  li {
+    margin-top: 9%;
+  }
+}
+// section_2 styles ends
+// section_3 styles starts
+
+.section_3 {
+  width: 100%;
+  min-height: 984px;
+  background: $yellow;
+}
+
+.section_3_header {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  padding-top: 75px;
+  padding-bottom: 55px;
+  text-align: center;
+  h3{
+    font-size: 30px;
+  }
+  a {
+    @include allSth();
+  }
+}
+
+.ivents {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.ivent {
+  min-width: 280px;
+  width:28%;
+    *{
+      margin-bottom: 10px;
+      color: black;
+    }
+    img{
+      margin-bottom: 20px;
+      width:100%;
+    }
+
+  h4 {
+    text-transform: uppercase;
+  }
+  margin-bottom: 40px
+}
+// section_3 styles ends
+// section_4 styles starts
+.section_4{
+  padding-top:75px;
+  background: #FAF3E3;
+  min-height: 649px;
+  width: 100%;
+    .wrapper{
+    display: flex;
+    }
+}
+
+.banners{
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  a{
+    margin-bottom: -10px;
+      img{
+        width: 100%;
+        height:80%;
+      }
+  }
+}
+.news{
+  display: flex;
+  flex-wrap: wrap;
+  width:50%;
+}
+
+.news_header{
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 10%;
+  padding-bottom:16%;
+  a{
+    @include allSth();
+    padding-top: 5px;
+  }
+  *{
+    color:black;
+  }
+  h4{
+    font-size: 30px;
+  }
+}
+.news_links{
+  *{
+    color:black;
+  }
+  margin-top: -10%;
+}
+.news_link{
+  a{
+    display: flex;
+  }
+  margin-bottom: 10px;
+}
+.news_desc{
+  padding-top: 15px;
+  margin-left: 3%;
+  p,span{
+    margin-bottom: 14px;
+  }
+  p{
+    color:#F6404F;
+  }
+  span{
+    font-size: 18px;
+    line-height: 130%;
+  }
 }

@@ -11,7 +11,7 @@ function convert(done) {
   .pipe(sourcemaps.init())
   .pipe(sass({
     errorLogToConsole:true,
-    outputStyle:'compressed'
+    // outputStyle:'compressed'
   }).on('error', sass.logError))
   .pipe(rename('style.css'))
   .pipe(autoprefixer({
