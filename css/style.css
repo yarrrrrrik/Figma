@@ -2,7 +2,8 @@ body {
   width: 100vw;
   background: grey;
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+  overflow-x: hidden; }
 
 * {
   color: inherit;
@@ -259,5 +260,52 @@ a:hover {
   .news_desc span {
     font-size: 18px;
     line-height: 130%; }
+
+.footer {
+  background: #04cdcd;
+  width: 100%;
+  min-height: 476px;
+  padding-top: 50px; }
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .links .wrapper_ul {
+    width: 22%; }
+    .links .wrapper_ul * {
+      margin-top: 6%; }
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+.news_sub {
+  max-width: 25%;
+  width: 22%; }
+  .news_sub p {
+    margin-bottom: 5%; }
+  .news_sub form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .news_sub input {
+    height: 40px;
+    width: 85%;
+    border: none;
+    padding-left: 5%; }
+  .news_sub button {
+    width: 15%;
+    height: 40px;
+    background: red;
+    border: none; }
 
 /*# sourceMappingURL=style.css.map */
